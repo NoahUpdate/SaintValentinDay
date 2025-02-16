@@ -48,8 +48,8 @@ function App() {
             <>
               <div className='"w-60 rounded-full h-60 bg-radial from-white to-[#FFE7EB] opacity-75 shadow-lg"'>
                 <img
-                  src="src/assets/images/shinchan-saludo-nf.png"
-                  alt="sinchan ingreso"
+                  src="/images/shinchan-saludo-nf.png"
+                  alt="sinchan saludo"
                   className="h-[400px] w-auto mx-auto floating-imagese -translate-y-12 "
                 />
               </div>
@@ -64,8 +64,8 @@ function App() {
               <img
                 src={
                   btnkamen
-                    ? 'src/assets/images/shinchan-actionkamen.jpg'
-                    : 'src/assets/images/sinchan1.png'
+                    ? '/images/shinchan-actionkamen.jpg'
+                    : '/images/sinchan1.png'
                 }
                 alt="sinchan ingreso"
                 className="h-[180px] w-auto mx-auto floating-imagese "
@@ -89,13 +89,13 @@ function App() {
             {/* <audio id="shinchan-audio" src="https://www.myinstants.com/es/instant/uoo-shin-chan-71244/?utm_source=copy&utm_medium=share" preload="auto" /> */}
             <audio
               ref={audioRef}
-              src="src/assets/audio/uoo-shin-chan.mp3"
+              src="/audio/uoo-shin-chan.mp3"
               preload="auto"
             />
             <button onClick={manejarSaludo}>
               <img
                 typeof="button"
-                src="src/assets/images/shinchan-flower.png"
+                src="/images/shinchan-flower.png"
                 alt="shinchan-flower"
                 className={`h-[120px] absolute z-0 cursor-pointer ${
                   showFlower ? 'animate-fadeIn' : 'opacity-0'

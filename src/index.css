@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: 'KaClaudya';
-  src: url('/src/assets/fonts/KaClaudya.ttf') format('truetype');
+  src: url('/fonts/KaClaudya.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'MarilynScript';
-  src: url('/src/assets/fonts/MarilynScript.ttf') format('truetype');
+  src: url('/fonts/MarilynScript.ttf') format('truetype');
 }
 
 @theme {
