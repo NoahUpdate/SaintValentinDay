@@ -19,6 +19,7 @@
 
 .elemento {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  animation: fbutton 3s infinite ease-in-out;
 }
 
 @keyframes float {
@@ -30,6 +31,18 @@
   }
   100% {
     transform: translateX(-20px);
+  }
+}
+
+@keyframes fbutton {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
   }
 }
 

@@ -75,7 +75,7 @@ function App() {
               </p>
               <button
                 onClick={manejarBtnKamen}
-                className="w-[160px] rounded-md px-1.5 py-1 text-center border bg-indigo-600 border-indigo-600 text-white font-mono"
+                className="w-[160px] rounded-md px-1.5 py-1 text-center border bg-indigo-600 border-indigo-600 text-white font-mono elemento"
               >
                 {' '}
                 Ayudanos Action Kamen!!!
