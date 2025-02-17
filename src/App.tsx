@@ -11,17 +11,15 @@ function App() {
 
   // Función para generar posiciones aleatorias
   const getRandomPosition = () => {
-    const randomTop = Math.random() * 50 // Genera un número aleatorio entre 0 y 90
-    const randomLeft = Math.random() * 50 // Genera un número aleatorio entre 0 y 90
+    const randomTop = Math.random() * 84 + 8 // Genera un número aleatorio entre 8 y 92
+    const randomLeft = Math.random() * 72 + 14 // Genera un número aleatorio entre 14 y 86
     setPosition({ top: `${randomTop}%`, left: `${randomLeft}%` })
-    console.log('left', randomLeft)
-    console.log('top', randomTop)
   }
 
-  // Mueve la imagen cada 2 segundos
+  // Mueve la imagen cada 850 milisegundos
   useEffect(() => {
     if (showFlower) {
-      const interval = setInterval(getRandomPosition, 850)
+      const interval = setInterval(getRandomPosition, 750)
       return () => clearInterval(interval) // Limpiar el intervalo cuando el componente se desmonta
     }
   }, [showFlower]) // Solo activa el intervalo cuando showFlower es true
@@ -42,7 +40,7 @@ function App() {
 
   return (
     <>
-      <div className="z-[3] relative p-5 bg-gradient-to-br from-[#f7886f] to-[#f54ea4] h-dvh w-full flex justify-center items-center">
+      <div className="z-[3]  p-5 bg-gradient-to-br from-[#f7886f] to-[#f54ea4] h-dvh w-full flex justify-center items-center">
         <div className="border border-amber-100 w-[90%] h-[90%] p-5 flex flex-col justify-evenly items-center">
           {saludar ? (
             <>
@@ -54,9 +52,9 @@ function App() {
                 />
               </div>
               <p className="m- font-slave text-3xl text-center ">
-                "¡Hola, Ema! Eres más especial que mi juguete favorito y más
-                dulce que las chuches. ¡Te quiero más que a Action Kamen! ¡Feliz
-                San Valentín bbcita! ¡Brrr! 💖"
+                ¡Hola, Ema! Eres más especial que mi juguete favorito y más
+                dulce que las chuches. ¡Te quiero más que a Ultrahéroe! ¡Feliz
+                San Valentín bbcita! 💖 ¡Brrr!
               </p>
             </>
           ) : (
@@ -75,10 +73,11 @@ function App() {
               </p>
               <button
                 onClick={manejarBtnKamen}
-                className="w-[160px] rounded-md px-1.5 py-1 text-center border bg-indigo-600 border-indigo-600 text-white font-mono elemento"
+                className="w-[160px] rounded-md px-1.5 py-1 text-center border bg-indigo-600 border-indigo-600 text-white font-mono floating-button"
               >
-                {' '}
-                Ayudanos Action Kamen!!!
+                {btnkamen
+                  ? 'Recoge las flores Shin Chan'
+                  : 'Ayudanos Ultrahéroe!!!'}
               </button>{' '}
             </>
           )}
@@ -94,17 +93,14 @@ function App() {
             />
             <button onClick={manejarSaludo}>
               <img
-                typeof="button"
                 src="/images/shinchan-flower.png"
                 alt="shinchan-flower"
-                className={`h-[120px] absolute z-0 cursor-pointer ${
-                  showFlower ? 'animate-fadeIn' : 'opacity-0'
-                }`}
-                // className={`h-[120px] absolute z-0 cursor-pointer transition-opacity duration-[8000ms] ease-in-out ${showFlower ? 'opacity-100' : 'opacity-0'}`}
+                className="h-[120px] absolute z-0 cursor-pointer animate-fadeIn"
                 style={{
                   top: position.top,
                   left: position.left,
-                  transition: 'top 0.5s, left 0.5s' // Agrega una transición suave
+                  transition: 'top 0.5s, left 0.5s', // Agrega una transición suave
+                  transform: 'translate(-50%, -50%)'
                 }}
               />
             </button>

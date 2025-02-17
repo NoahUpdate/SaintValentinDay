@@ -1,23 +1,8 @@
-.content {
-  z-index: 2; /* Asegura que el contenido esté por encima de las imágenes */
-  padding: 20px;
-}
-
-.floating-images {
-  position: absolute;
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
-  /* z-index: 1; */
-  opacity: 1;
-  pointer-events: none;
-}
-
 .floating-imagese {
   animation: float 6s infinite ease-in-out;
 }
 
-.elemento {
+.floating-button {
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
   animation: fbutton 3s infinite ease-in-out;
 }
@@ -56,5 +41,5 @@
 }
 
 .animate-fadeIn {
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeIn 4s ease-in-out;
 }
