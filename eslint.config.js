@@ -27,7 +27,7 @@ export default tseslint.config(
       jsxA11y.flatConfigs.recommended,
       // prettier
       prettier,
-      'plugin:prettier/recommended'
+      // 'plugin:prettier/recommended'
     ],
     languageOptions: {
       ecmaVersion: 2020,
@@ -58,7 +58,8 @@ export default tseslint.config(
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }
-      ]
+      ],
+      // 'jsx-a11y/media-has-caption': 'off'
     }
   }
 )

@@ -86,6 +86,7 @@ function App() {
         {showFlower && (
           <>
             {/* <audio id="shinchan-audio" src="https://www.myinstants.com/es/instant/uoo-shin-chan-71244/?utm_source=copy&utm_medium=share" preload="auto" /> */}
+            {/*eslint-disable-next-line jsx-a11y/media-has-caption */}
             <audio
               ref={audioRef}
               src="/audio/uoo-shin-chan.mp3"
