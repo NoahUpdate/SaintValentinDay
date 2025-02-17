@@ -26,7 +26,7 @@ export default tseslint.config(
       // a11y (accessibility
       jsxA11y.flatConfigs.recommended,
       // prettier
-      prettier,
+      prettier
       // 'plugin:prettier/recommended'
     ],
     languageOptions: {
@@ -58,7 +58,7 @@ export default tseslint.config(
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }
-      ],
+      ]
       // 'jsx-a11y/media-has-caption': 'off'
     }
   }
